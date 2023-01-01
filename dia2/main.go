@@ -15,6 +15,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	defer file.Close()
 
 	reader := bufio.NewReader(file)
 	for {
